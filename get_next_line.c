@@ -6,7 +6,7 @@
 /*   By: astalha <astalha@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 01:52:11 by astalha           #+#    #+#             */
-/*   Updated: 2023/01/16 16:01:17 by astalha          ###   ########.fr       */
+/*   Updated: 2023/01/19 08:00:45 by astalha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ char	*join(char *s1, char *s2)
 
 	if (!s2)
 		return (s1);
-		ptr = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	ptr = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!ptr)
 		return (free(s1), free(s2), NULL);
 	ft_strlcpy(ptr, s1, ft_strlen(s1) + 1);

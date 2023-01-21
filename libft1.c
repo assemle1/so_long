@@ -6,7 +6,7 @@
 /*   By: astalha <astalha@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 18:00:05 by astalha           #+#    #+#             */
-/*   Updated: 2023/01/16 18:09:29 by astalha          ###   ########.fr       */
+/*   Updated: 2023/01/21 01:14:08 by astalha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (ptr);
 }
 
-void    ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-        write(fd, &c, 1);
+	write(fd, &c, 1);
 }
 
-void    ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-        if (!s)
-                return ;
-        while (*s)
-                ft_putchar_fd (*(s++), fd);
+	if (!s)
+		return ;
+	while (*s)
+		ft_putchar_fd (*(s++), fd);
 }
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
@@ -53,8 +53,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	unsigned int	i;
 
 	i = 0;
-    if (!s1)
-        return 1;
+	if (!s1)
+		return (1);
 	while ((s1[i] || s2[i]) && i < (unsigned int)n)
 	{
 		if ((unsigned char)s1[i] != (unsigned char)s2[i])
@@ -63,9 +63,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+
 char	*ft_strrchr(const char *s, char c)
 {
-	int				i;
+	int	i;
 
 	i = ft_strlen (s);
 	while (i >= 0)
@@ -75,18 +76,4 @@ char	*ft_strrchr(const char *s, char c)
 		i--;
 	}
 	return (NULL);
-}
-
-int     ft_strchr(char *s, char c)
-{
-	int			i;
-
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			return (1);
-		i++;
-	}
-	return (0);
 }
