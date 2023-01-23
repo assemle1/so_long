@@ -6,7 +6,7 @@
 /*   By: astalha <astalha@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 01:08:36 by astalha           #+#    #+#             */
-/*   Updated: 2023/01/23 17:46:39 by astalha          ###   ########.fr       */
+/*   Updated: 2023/01/23 19:14:19 by astalha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	print_msg(t_infos *my_infos)
 	if (my_infos->game_stat == 2)
 		print_ulost();
 	if (my_infos->game_stat == 3)
-		ft_printf("An error happened while making ressources\n");
+		ft_putstr_fd("Error : an mlx object was not created\n", 2);
 	if (!my_infos->game_stat)
 		ft_printf("you closed the game XX\n");
 	else
@@ -49,12 +49,7 @@ int	close_x(t_infos *my_infos)
 	my_infos->game_stat = 0;
 	print_msg(my_infos);
 	if (my_infos->window_ptr)
-	{
-		if (!my_infos->window_ptr)
-			mlx_destroy_window(my_infos->mlx_ptr, NULL);
-		else
-			mlx_destroy_window(my_infos->mlx_ptr, my_infos->window_ptr);
-	}
+		mlx_destroy_window(my_infos->mlx_ptr, my_infos->window_ptr);
 	free(my_infos->en);
 	freealloc2(my_infos->matrix);
 	exit(0);
@@ -64,12 +59,7 @@ int	close_window(t_infos *my_infos)
 {
 	print_msg(my_infos);
 	if (my_infos->window_ptr)
-	{
-		if (!my_infos->window_ptr)
-			mlx_destroy_window(my_infos->mlx_ptr, NULL);
-		else
-			mlx_destroy_window(my_infos->mlx_ptr, my_infos->window_ptr);
-	}
+		mlx_destroy_window(my_infos->mlx_ptr, my_infos->window_ptr);
 	free(my_infos->en);
 	freealloc2(my_infos->matrix);
 	exit(0);

@@ -6,7 +6,7 @@
 /*   By: astalha <astalha@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 00:54:05 by astalha           #+#    #+#             */
-/*   Updated: 2023/01/21 22:31:22 by astalha          ###   ########.fr       */
+/*   Updated: 2023/01/23 19:14:50 by astalha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,10 @@ void	make_textures(t_infos *my_infos)
 	if (!my_infos->player || !my_infos->s_player || !my_infos->space
 		||!my_infos->wall || !my_infos->collect || !my_infos->c_exit
 		|| !my_infos->o_exit)
+	{
+		ft_putstr_fd("Error : an mlx object was not created\n", 2);
 		close_window(my_infos);
+	}
 }
 
 void	image_to_window(t_infos *my_infos, char obj, int j, int i)

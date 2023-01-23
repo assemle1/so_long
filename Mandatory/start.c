@@ -6,7 +6,7 @@
 /*   By: astalha <astalha@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 00:56:47 by astalha           #+#    #+#             */
-/*   Updated: 2023/01/21 20:58:38 by astalha          ###   ########.fr       */
+/*   Updated: 2023/01/23 19:08:28 by astalha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int	close_window(t_infos *my_infos)
 void	start(t_infos *my_infos)
 {
 	my_infos->mlx_ptr = mlx_init();
+	my_infos->window_ptr = NULL;
 	make_textures(my_infos);
 	get_pos(my_infos, 'P');
 	my_infos->steps = 0;
