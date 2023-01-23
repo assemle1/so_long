@@ -6,7 +6,7 @@
 #    By: astalha <astalha@student.1337.ma>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/16 18:17:23 by astalha           #+#    #+#              #
-#    Updated: 2023/01/23 01:35:52 by astalha          ###   ########.fr        #
+#    Updated: 2023/01/23 18:19:38 by astalha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRCS_Mandatory	=	Mandatory/checkers.c Mandatory/checkers_utils.c Mandatory/ft_sp
 					Mandatory/movs.c Mandatory/start.c
 
 SRCS_Bonus		=	bonus/checkers_bonus.c bonus/checkers_utils_bonus.c bonus/ft_split_bonus.c bonus/get_next_line_utils_bonus.c bonus/get_next_line_bonus.c bonus/libft1_bonus.c bonus/parcing_bonus.c bonus/so_long_bonus.c bonus/valid_path_bonus.c bonus/ft_printf_bonus.c bonus/ft_printf_utils_bonus.c bonus/make_img_bonus.c\
-					bonus/movs_bonus.c bonus/start_bonus.c bonus/movs_enemy.c bonus/ft_itoa.c bonus/enemy.c bonus/print.c
+					bonus/movs_bonus.c bonus/start_bonus.c bonus/movs_enemy.c bonus/ft_itoa.c bonus/enemy.c bonus/print.c bonus/make_img_utils.c
 
 OBJS			= $(SRCS_Mandatory:.c=.o)
 OBJS_B			= $(SRCS_Bonus:.c=.o)

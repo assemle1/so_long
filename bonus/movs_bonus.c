@@ -6,7 +6,7 @@
 /*   By: astalha <astalha@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 19:38:36 by astalha           #+#    #+#             */
-/*   Updated: 2023/01/23 01:45:38 by astalha          ###   ########.fr       */
+/*   Updated: 2023/01/23 18:14:30 by astalha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ void	mov_up(t_infos *my_infos)
 {
 	if (my_infos->matrix[my_infos->xp - 1]
 		[my_infos->yp] == 'E' && my_infos->stat)
+	{
+		my_infos->game_stat = 1;
 		close_window(my_infos);
+	}
 	if (my_infos->matrix[my_infos->xp - 1]
 		[my_infos->yp] == 'N')
 	{
@@ -41,7 +44,10 @@ void	mov_dn(t_infos *my_infos)
 {
 	if (my_infos->matrix[my_infos->xp + 1]
 		[my_infos->yp] == 'E' && my_infos->stat)
+	{
+		my_infos->game_stat = 1;
 		close_window(my_infos);
+	}
 	if (my_infos->matrix[my_infos->xp + 1]
 		[my_infos->yp] == 'N')
 	{
@@ -66,7 +72,10 @@ void	mov_rt(t_infos *my_infos)
 {
 	if (my_infos->matrix[my_infos->xp]
 		[my_infos->yp + 1] == 'E' && my_infos->stat)
+	{
+		my_infos->game_stat = 1;
 		close_window(my_infos);
+	}
 	if (my_infos->matrix[my_infos->xp]
 		[my_infos->yp + 1] == 'N')
 	{
@@ -91,7 +100,10 @@ void	mov_lt(t_infos *my_infos)
 {
 	if (my_infos->matrix[my_infos->xp]
 		[my_infos->yp - 1] == 'E' && my_infos->stat)
+	{
+		my_infos->game_stat = 1;
 		close_window(my_infos);
+	}
 	if (my_infos->matrix[my_infos->xp]
 		[my_infos->yp - 1] == 'N')
 	{

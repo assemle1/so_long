@@ -6,7 +6,7 @@
 /*   By: astalha <astalha@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 19:26:15 by astalha           #+#    #+#             */
-/*   Updated: 2023/01/23 01:39:15 by astalha          ###   ########.fr       */
+/*   Updated: 2023/01/23 18:29:22 by astalha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@
 # define K_DN 125
 # define K_EX 53
 
-typedef	struct s_enemy
+typedef struct s_enemy
 {
 	int	ey;
-	int ex;
-}				t_enemy;
+	int	ex;
+}			t_enemy;
 
 typedef struct s_infos
 {
@@ -119,20 +119,23 @@ void		place_images(t_infos *my_infos);
 void		get_pos(t_infos *my_infos, char c);
 void		start(t_infos *my_infos);
 
-void	mov_en_up(t_infos *my_infos);
-void	mov_en_dn(t_infos   *my_infos);
-void    mov_en_rt(t_infos   *my_infos);
-void    mov_en_lt(t_infos   *my_infos);
-char	*ft_itoa(int n);
+void		mov_en_up(t_infos *my_infos);
+void		mov_en_dn(t_infos *my_infos);
+void		mov_en_rt(t_infos *my_infos);
+void		mov_en_lt(t_infos *my_infos);
+char		*ft_itoa(int n);
 
-void	print_uwon(void);
-void	print_ulost(void);
-void	print_msg(t_infos *my_infos);
-int	close_x(t_infos *my_infos);
-int	close_window(t_infos *my_infos);
-void	enemy_event(t_infos *my_infos, void fct(), int stat);
-int	mov_enemy(t_infos *my_infos);
-void	find_ennemy(t_infos	*my_infos);
-int     conditions(t_infos  *my_infos, int  x, int y);
+void		print_uwon(void);
+void		print_ulost(void);
+void		print_msg(t_infos *my_infos);
+int			close_x(t_infos *my_infos);
+int			close_window(t_infos *my_infos);
+void		enemy_event(t_infos *my_infos, void fct(), int stat);
+int			mov_enemy(t_infos *my_infos);
+void		find_ennemy(t_infos	*my_infos);
+int			conditions(t_infos *my_infos, int x, int y);
+void		img_to_win(t_infos *my_infos, void *obj, int j, int i);
+int			if_not_works(t_infos *my_infos);
+void		find_collect(t_infos *my_infos, int j, int i);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: astalha <astalha@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 01:08:36 by astalha           #+#    #+#             */
-/*   Updated: 2023/01/23 01:12:31 by astalha          ###   ########.fr       */
+/*   Updated: 2023/01/23 17:46:39 by astalha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ void	print_msg(t_infos *my_infos)
 		print_uwon();
 	if (my_infos->game_stat == 2)
 		print_ulost();
+	if (my_infos->game_stat == 3)
+		ft_printf("An error happened while making ressources\n");
 	if (!my_infos->game_stat)
 		ft_printf("you closed the game XX\n");
 	else
